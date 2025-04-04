@@ -23,12 +23,24 @@ namespace Calculator
             int sum = CalculateSum(num1, num2);
             Console.WriteLine($"The sum of {num1} and {num2} is {sum}.");
 
+            Console.Write("Enter first number: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Enter second number: ");
+            int b = int.Parse(Console.ReadLine());
+
+            int difference = CalculateDifference(a, b);
+            Console.WriteLine($"{a} - {b} = {difference}");
             Console.ReadKey();
         }
 
         public static int CalculateSum(int a, int b)
         {
             return a + b;
+        }
+
+        public static int CalculateDifference(int a, int b)
+        {
+            return a - b;
         }
     }
 }
